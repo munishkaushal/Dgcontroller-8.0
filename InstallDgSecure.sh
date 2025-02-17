@@ -6,10 +6,11 @@
 # e.g.:
 # InstallerName="./DgSecure-8.8.0.48-linux-x64-installer.run" 
 # InstallerName="/PathToInstaller/DgSecure-8.8.0.48-linux-x64-installer.run"
-cd  "/home/ec2-user/Dgcontroller-8.0"
+cd  /home/ec2-user/Dgcontroller-8.0
 echo "Current Directory: $(pwd)"
 
 sudo chmod 755 DgSecure-8.8.0.59-linux-x64-installer.run
+
 InstallerName="./DgSecure-8.8.0.59-linux-x64-installer.run" 
 
 # ----------INSTALLATION DIRECTORY----------
