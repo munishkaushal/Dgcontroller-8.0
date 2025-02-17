@@ -8,16 +8,24 @@ pipeline {
                 git branch: 'Dev-branch', url: 'https://github.com/munishkaushal/Dgcontroller-8.0'
             }
         }
-        stage('Set Permissions') {
+        stage('Who Am I') {
             steps {
-                // Set execute permissions for the InstallDgSecure.sh script
-                sh 'chmod 755 InstallDgSecure.sh'
+                // Print the current user
+                sh 'whoami'
             }
         }
-        stage('Run Shell Script') {
+        stage('Set Permissions') {
             steps {
-                // Run the InstallDgSecure.sh script from /opt/ directory
-                sh './InstallDgSecure.sh'
+                // Ensure the script is executable
+                sh 'chmod 755 InstallDgSecure.sh'
+                // Ensure the installer is executable (if necessary)
+                sh 'chmod 755 DgSecure-8.8.0.59-linux-x64-installer.run'
+            }
+        }
+        stage('Run Shell Script as Root') {
+            steps {
+                // Run the InstallDgSecure.sh script from the workspace with sudo
+                sh 'sudo /var/lib/jenkins/workspace/DSM-8.0/InstallDgSecure.sh'
             }
         }
     }
