@@ -11,13 +11,13 @@ pipeline {
         stage('Set Permissions') {
             steps {
                 // Set execute permissions for the InstallDgSecure.sh script
-                sh 'chmod 755 /opt/InstallDgSecure.sh'
+                sh 'chmod 755 InstallDgSecure.sh'
             }
         }
         stage('Run Shell Script') {
             steps {
                 // Run the InstallDgSecure.sh script from /opt/ directory
-                sh '/opt/InstallDgSecure.sh'
+                sh './InstallDgSecure.sh'
             }
         }
     }
