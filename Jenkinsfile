@@ -1,6 +1,8 @@
- pipeline {
-    agent auto-aws
-//Updated comments
+pipeline {
+    agent {
+        label 'auto-aws'
+    }
+    // Updated comments
     stages {
         stage('Checkout') {
             steps {
