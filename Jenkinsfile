@@ -1,5 +1,5 @@
  pipeline {
-    agent any
+    agent auto-aws
 //Updated comments
     stages {
         stage('Checkout') {
