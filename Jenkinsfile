@@ -34,6 +34,7 @@ pipeline {
             steps {
                 // Run the InstallDgSecure.sh script from the workspace with sudo
                 sh 'sudo ${WORKSPACE}/InstallDgSecure.sh'
+                echo "The new build has been started"
             }
         }
     }
