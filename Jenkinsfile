@@ -2,7 +2,7 @@ pipeline {
     agent {
         label 'auto-aws1'
     }
-    // Updated comments
+    // Updated comments for new instance
     stages {
         stage('Checkout') {
             steps {
