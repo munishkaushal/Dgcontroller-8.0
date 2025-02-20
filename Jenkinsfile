@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'auto-aws'
+        label 'auto-aws1'
     }
     // Updated comments
     stages {
